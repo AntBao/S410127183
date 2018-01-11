@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" CodeBehind="Site.master.cs" Inherits="S410127183_1.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>動態資料站台</title>
+    <link href="~/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <h1 class="DDMainHeader">動態資料站台</h1>
+    <div class="DDNavigation">
+        <a runat="server" href="~/"><img alt="回到首頁" runat="server" src="DynamicData/Content/Images/back.gif" />回到首頁</a>
+    </div>
+
+    <form id="form1" runat="server">
+    <div>
+        <%-- TODO: 啟用部分轉譯，其方式是將 EnablePartialRendering 屬性設定為 "true" 以提供更平順的瀏覽經驗。
+             將部分轉譯維持在停用狀態會在應用程式的開發階段提供更好的偵錯經驗。 --%>
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="false"/>
+        
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
+
